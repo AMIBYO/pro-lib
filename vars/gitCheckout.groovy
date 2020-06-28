@@ -1,5 +1,7 @@
 def call(Map stageParams) {
-
+stage("Install") {
+            echo "mvn compile"
+        }
     checkout([
         $class: 'GitSCM',
         branches: [[name:  stageParams.branch ]],
