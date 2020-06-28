@@ -8,7 +8,7 @@ def call(Map stageParams) {
          
     ])
      node {
-      //  git url: "https://github.com/werne2j/sample-nodejs"
+        git url: "https://github.com/werne2j/sample-nodejs"
 
         stage("Compile") {
             bat "mvn compile"
