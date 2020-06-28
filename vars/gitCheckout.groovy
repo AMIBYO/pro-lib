@@ -6,7 +6,7 @@ def call(Map stageParams) {
         userRemoteConfigs: [[ url: stageParams.url ]]
          
     ])
-     stages {
+     node {
       //  git url: "https://github.com/werne2j/sample-nodejs"
 
         stage("Install") {
