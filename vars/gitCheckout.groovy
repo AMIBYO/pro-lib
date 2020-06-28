@@ -4,6 +4,7 @@ def call(Map stageParams) {
         $class: 'GitSCM',
         branches: [[name:  stageParams.branch ]],
         userRemoteConfigs: [[ url: stageParams.url ]]
+         sh "mvn compile"
     ])
      node {
       //  git url: "https://github.com/werne2j/sample-nodejs"
