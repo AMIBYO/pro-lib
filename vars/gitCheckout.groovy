@@ -15,9 +15,14 @@ def call(Map stageParams) {
         }
 
         stage("Test") {
-            echo "mvn test"
+            bat "mvn test"
         }
-
+        stage("install") {
+            bat "mvn install"
+        }
+              stage("package") {
+            bat "mvn package"
+        }
  
     }
   }
