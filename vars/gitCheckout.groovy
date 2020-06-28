@@ -10,7 +10,7 @@ def call(Map stageParams) {
       //  git url: "https://github.com/werne2j/sample-nodejs"
 
         stage("Install") {
-            sh "mvn compile"
+            echo "mvn compile"
         }
 
         stage("Test") {
