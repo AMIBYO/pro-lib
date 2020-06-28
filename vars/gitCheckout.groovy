@@ -1,6 +1,5 @@
 def call(Map stageParams) {
-stage("Install") {
-            echo "mvn compile"
+
         }
     checkout([
         $class: 'GitSCM',
@@ -11,12 +10,12 @@ stage("Install") {
      node {
       //  git url: "https://github.com/werne2j/sample-nodejs"
 
-        stage("Install") {
+        stage("Compile") {
             echo "mvn compile"
         }
 
         stage("Test") {
-            sh "mvn package"
+            echo "mvn test"
         }
 
  
